@@ -27,14 +27,11 @@
         <td th:text="${user.getPassword()}"></td>
 
         <td sec:authorize="hasAuthority('ADMIN')">
-            <a th:href="@{/delete/{id}(id=${user.id})}">Delete</a>
+
+            <a th:href="@{/delete/{id}(id=${user.id})}">видалити</a>
+
         </td>
-
-<!--        <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>-->
-
-
     </tr>
-
     </tbody>
 </table>
 

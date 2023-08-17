@@ -6,9 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @AllArgsConstructor
@@ -16,9 +14,9 @@ public class MainController {
     private final UserService userService;
 
 
-    @GetMapping("")
-    public String hello() {
-
+    @GetMapping("/")
+    public String hello(Model model) {
+    model.addAttribute("users",userService.getAllUsers());
         return "hello";
     }
 
@@ -41,4 +39,9 @@ public class MainController {
         return "redirect:/login";
     }
 
+    @GetMapping("/delete/{id}")
+    public String deleteUser(@PathVariable("id") Long id) {
+        userService.delete(id);
+        return "redirect:/";
+    }
 }

@@ -43,8 +43,7 @@ public class SecurityConfiguration {
                         .authenticated())
                 .formLogin((form) -> form.loginPage("/login")
                         .permitAll())
-                .logout(httpSecurityLogoutConfigurer -> httpSecurityLogoutConfigurer
-                        .permitAll());
+                .logout(LogoutConfigurer::permitAll);
 
 
         return http.build();
