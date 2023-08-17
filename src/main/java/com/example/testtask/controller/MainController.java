@@ -3,7 +3,6 @@ package com.example.testtask.controller;
 import com.example.testtask.entity.UserEntity;
 import com.example.testtask.service.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 @AllArgsConstructor
 public class MainController {
-    private final UserService userService;
+     UserService userService;
 
 
     @GetMapping("")
