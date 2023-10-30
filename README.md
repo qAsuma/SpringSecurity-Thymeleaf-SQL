@@ -1,9 +1,7 @@
 # SpringSecurity-Thymeleaf-SQL
 
 You are hereHome > java >
-Spring Boot MVC CRUD Example
-javaMVCSpringSpring Bootby devs5003 - August 14, 20234
-Last Updated on October 21st, 2023
+
 
 Spring Boot MVC CRUD ExampleWhen we develop a Web Application using Spring Boot, the knowledge of MVC pattern becomes important. Needless to say, the MVC is a short form of Model, View and the Controller. Moreover, the Spring Boot makes a developer’s life easier in developing the web application using MVC architecture. Spring Boot offers us a starter project ‘Spring web’ to work with MVC applications. In this article, we are going to learn entire CRUD operations that are mandatory to develop any MVC application. It will also provide you the knowledge of complete flow of MVC starting from user interface till the data layer. Hence our article title is ‘Spring Boot MVC CRUD Example’.
 
